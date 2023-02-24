@@ -13,7 +13,7 @@
         <input type="search" id="search-input" class="search-input" autocomplete="off" placeholder="Sök...">
         <ul id="search-results" class="search-results">
                 <li id="solen" class="search-item">Solen</li>
-                <li id="mercurius" class="search-item">Mercurius</li>
+                <li id="merkurius" class="search-item">Merkurius</li>
                 <li id="venus" class="search-item">Venus</li>
                 <li id="jorden" class="search-item">Jorden</li>
                 <li id="mars" class="search-item">Mars</li>
@@ -23,53 +23,56 @@
                 <li id="neptunus" class="search-item">Neptunus</li>
         </ul>
         <h1 class="title">Solaris</h1>
-        <div class="sol">
-            <div class="hide">Sol</div>
+        <div class="solen" id="solen--planet">
+            <div class="hide" id="solen--title">Solen</div>
         </div>
-        <div class="mercury">
-            <div class="hide">Mercury</div>
+        <div class="merkurius" id="merkurius--planet">
+            <div class="hide" id="merkurius--title">Merkurius</div>
         </div>
-        <div class="venus">
-            <div class="hide">Venus</div>
+        <div class="venus" id="venus--planet">
+            <div class="hide" id="venus--title">Venus</div>
         </div>
-        <div class="earth">
-            <div class="hide">Earth</div>
+        <div class="jorden" id="jorden--planet">
+            <div class="hide" id="jorden--title">Jorden</div>
         </div>
-        <div class="mars">
-            <div class="hide">Mars</div>
+        <div class="mars" id="mars--planet">
+            <div class="hide" id="mars--title">Mars</div>
         </div>
-        <div class="jupiter">
-            <div class="hide">Jupiter</div>
+        <div class="jupiter" id="jupiter--planet">
+            <div class="hide" id="jupiter--title">Jupiter</div>
         </div>
-        <div class="saturn">
-            <div class="hide">Saturn</div>
-            <div class="saturn--rings"></div></div>
-        <div class="uranus">
-            <div class="hide">Uranus</div>
+        <div class="saturnus" id="saturnus--planet">
+            <div class="hide " id="saturnus--title">Saturnus</div>
+            <div class="saturnus--rings"></div></div>
+        <div class="uranus" id="uranus--planet">
+            <div class="hide" id="uranus--title">Uranus</div>
         </div>
-        <div class="neptune">
-            <div class="hide">Neptune</div>
+        <div class="neptunus" id="neptunus--planet">
+            <div class="hide" id="uranus--title">Neptunus</div>
         </div>
     </div>
-    <div class="modal-window">
-        <div class="left-button">
+    <div class="modal-window" id="modal-window">
+        <div class="left-button" id="left-button">
             <img src="assets/arrow.png" class="left-arrow">
         </div>
         <div class="info-container">
             <div class="header">
-                <h1>Planet</h1>
+                <h1 class="planet-name" id="planet-name">Planet</h1>
             </div>
             <div class="desc">
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto ab mollitia, eum delectus aperiam voluptatem reprehenderit distinctio blanditiis ducimus modi perspiciatis! Nesciunt adipisci earum voluptas laborum, cupiditate iusto esse quibusdam.</p>
+                <h2 class="desc--title" id="desc--title">Beskrivning</h2>
+                <p class="desc--content" id="desc--content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto ab mollitia, eum delectus aperiam voluptatem reprehenderit distinctio blanditiis ducimus modi perspiciatis! Nesciunt adipisci earum voluptas laborum, cupiditate iusto esse quibusdam.</p>
             </div>
             <div class="specs">
+                <h2 class="specs--title" id="specs--title">Fakta</h2>
                 <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Expedita, ut. Numquam odit voluptates modi dolor quibusdam, doloribus fuga obcaecati tempore nobis nemo dignissimos placeat magni dolorum eos. Id, accusantium laboriosam.</p>
             </div>
             <div class="image">
                 <div class="planet-image"></div>
             </div>
+            <div class="back-button" id="back-button">X</div>
         </div> 
-        <div class="right-button">
+        <div class="right-button" id="right-button">
             <img src="assets/arrow.png" class="right-arrow">
         </div>
     </div>

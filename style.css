@@ -46,6 +46,15 @@ body {
     overflow: hidden;
 }
 
+p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
+    padding-left: 0.5rem;
+    color:rgb(255, 254, 219);
+    text-shadow: 2px 2px 3px rgb(0, 0, 0);
+}
+
 .title {
     position: absolute;
     margin-top: 5vh;
@@ -88,6 +97,10 @@ body {
     display: none;
 }
 
+.search-item:hover {
+    cursor: pointer;
+}
+
 .search-results {
     display: block;
     list-style-type: none;
@@ -121,7 +134,7 @@ input:focus ~ .search-results{
     justify-content: space-between;
 }
 
-.sol {
+.solen {
     aspect-ratio: 1;
     width: 150vh;
     height: 150vh;
@@ -142,7 +155,7 @@ input:focus ~ .search-results{
     position: relative;
 }
 
-.sol:hover .hide {
+.solen:hover .hide {
     display: block;
     position: absolute;
     animation: color-change 0.5s infinite;
@@ -151,12 +164,13 @@ input:focus ~ .search-results{
     top: 50vh;
   }
 
-  .sol:hover {
+.solen:hover {
     animation: sol-flashing 0.5s infinite;
     animation-direction: alternate;
+    cursor: pointer;
 }
 
-.mercury {
+.merkurius {
     aspect-ratio: 1;
     width: 4vh;
     height: 4vh;
@@ -172,7 +186,7 @@ input:focus ~ .search-results{
     position: relative;
 }
 
-.mercury:hover .hide {
+.merkurius:hover .hide {
     display: block;
     position: absolute;
     padding: 10px;
@@ -184,9 +198,10 @@ input:focus ~ .search-results{
     top: -100px;
   }
 
-.mercury:hover {
+.merkurius:hover {
     animation: flashing 0.3s infinite;
     animation-direction: alternate;
+    cursor: pointer;
 }
 
 .venus {
@@ -208,6 +223,7 @@ input:focus ~ .search-results{
 .venus:hover {
     animation: flashing 0.3s infinite;
     animation-direction: alternate;
+    cursor: pointer;
 }
 
 .venus:hover .hide {
@@ -223,7 +239,7 @@ input:focus ~ .search-results{
     
   }
 
-.earth {
+.jorden {
     aspect-ratio: 1;
     width: 10vh;
     height: 10vh;
@@ -243,7 +259,7 @@ input:focus ~ .search-results{
     position: relative;
 }
 
-.earth:hover .hide {
+.jorden:hover .hide {
     display: block;
     position: absolute;
     padding: 10px;
@@ -255,9 +271,10 @@ input:focus ~ .search-results{
     top: -100px;
   }
 
-.earth:hover {
+.jorden:hover {
     animation: flashing 0.3s infinite;
     animation-direction: alternate;
+    cursor: pointer;
 }
 
 .mars {
@@ -291,6 +308,7 @@ input:focus ~ .search-results{
 .mars:hover {
     animation: flashing 0.3s infinite;
     animation-direction: alternate;
+    cursor: pointer;
 }
 
 .jupiter {
@@ -324,9 +342,10 @@ input:focus ~ .search-results{
 .jupiter:hover {
     animation: flashing 0.3s infinite;
     animation-direction: alternate;
+    cursor: pointer;
 }
 
-.saturn {
+.saturnus {
     aspect-ratio: 1;
     width: 20vh;
     height: 20vh;
@@ -342,7 +361,7 @@ input:focus ~ .search-results{
     position: relative;
 }
 
-.saturn:hover .hide {
+.saturnus:hover .hide {
     display: block;
     position: absolute;
     padding: 10px;
@@ -354,15 +373,16 @@ input:focus ~ .search-results{
     top: -100px;
   }
 
-.saturn:hover {
+.saturnus:hover {
     animation: flashing 0.3s infinite;
     animation-direction: alternate;
+    cursor: pointer;
 }
 
-.saturn--rings {
+.saturnus--rings {
     width: 40vh;
-    height: 5px;
-    border-radius: 10px;
+    height: 8px;
+    border-radius: 100%;
     background: rgba(255, 255, 255, 0.684);
     margin-left: -10vh;
     margin-top: 50%;
@@ -400,9 +420,10 @@ input:focus ~ .search-results{
 .uranus:hover {
     animation: flashing 0.3s infinite;
     animation-direction: alternate;
+    cursor: pointer;
 }
 
-.neptune {
+.neptunus {
     aspect-ratio: 1;
     width: 13vh;
     height: 13vh;
@@ -419,7 +440,7 @@ input:focus ~ .search-results{
     position: relative;
 }
 
-.neptune:hover .hide {
+.neptunus:hover .hide {
     display: block;
     position: absolute;
     padding: 10px;
@@ -431,9 +452,10 @@ input:focus ~ .search-results{
     top: -100px;
   }
 
-.neptune:hover {
+.neptunus:hover {
     animation: flashing 0.3s infinite;
     animation-direction: alternate;
+    cursor: pointer;
 }
 
 .hide {
@@ -452,6 +474,10 @@ input:focus ~ .search-results{
     left: 0;
     margin-right: auto;
     backdrop-filter: blur(20px);
+}
+
+.modal-window {
+    display: block;
 }
 
 .info-container {
@@ -480,12 +506,44 @@ input:focus ~ .search-results{
 
 .header {
     grid-area: header;
-    margin: auto;
+    height: 100px;
+    margin-top: 2rem;
+    margin-bottom: none;
+}
+
+.planet-name {
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 3rem;
+    margin-top: 1rem;
+    padding-top: 1rem;
+    color:rgb(255, 253, 155);
+    text-shadow: 2px 2px 3px rgb(0, 0, 0);   
 }
 
 .desc {
+    height: 40rem;
     grid-area: desc;
     padding: 2rem;
+}
+
+.desc--title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 300;
+    padding-left: 0.5rem;
+    color:rgb(255, 253, 155);
+    text-shadow: 2px 2px 3px rgb(0, 0, 0);
+}
+
+.desc--content {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 500;
+    padding-left: 0.5rem;
+    color:rgb(255, 254, 219);
+    text-shadow: 1px 1px 1px rgb(0, 0, 0);
+    padding-bottom: 0;
 }
 
 .specs {
@@ -493,12 +551,21 @@ input:focus ~ .search-results{
     padding: 2rem;
 }
 
+.specs--title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 300;
+    padding-left: 0.5rem;
+    color:rgb(255, 253, 155);
+    text-shadow: 2px 2px 3px rgb(0, 0, 0);
+}
+
 .image {
     grid-area: image;
     background-color: white;
-    height: 20rem;
-    width: 20rem;
-    margin: auto;
+    height: calc(20vw);
+    width: calc(20vw);
+    margin-top: calc(50% - 10rem/2);
 }
 
 .left-button {
@@ -508,7 +575,7 @@ input:focus ~ .search-results{
     display: block;
     background-position: center;
     position: relative;
-    top: 42.5%;
+    top: 43%;
     margin-left: 3%;
     margin-right: auto;
     background: linear-gradient(0deg, rgba(0, 123, 255, 0.2) 0%, rgba(0, 195, 255, 0.2) 50%, rgba(0, 221, 255, 0.2) 100%) center top fixed;
@@ -527,6 +594,11 @@ input:focus ~ .search-results{
     opacity: 0.5;
 }
 
+.left-arrow:hover {
+    opacity: 0.8;
+    cursor: pointer;
+}
+
 .right-button {
     z-index: 10;
     width: 5%;
@@ -534,7 +606,7 @@ input:focus ~ .search-results{
     display: block;
     background-position: center;
     position: relative;
-    top: 42.5%;
+    top: 43%;
     margin-right: 3%;
     margin-left: auto;
     background: linear-gradient(0deg, rgba(0, 123, 255, 0.2) 0%, rgba(0, 195, 255, 0.2) 50%, rgba(0, 221, 255, 0.2) 100%) center top fixed;
@@ -550,4 +622,25 @@ input:focus ~ .search-results{
     padding-left: 10px;
     padding-right: 10px;
     opacity: 0.5;
+}
+
+.right-arrow:hover {
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+.back-button {
+    position: absolute;
+    top: -2.5rem;
+    right: 5px;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2rem;
+    color:rgb(255, 253, 155);
+    text-shadow: 2px 2px 3px rgb(0, 0, 0);   
+}
+
+.back-button:hover {
+    color:rgb(255, 255, 255);  
+    cursor: pointer;
 }

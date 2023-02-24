@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap');
 
+
+/* Animations */
 @keyframes color-change {
     0% { color: rgb(251, 250, 196); }
     50% { color: white; }
@@ -38,7 +40,7 @@
     }
   }
 
-
+/* Tags */
 body {
     height: 100vh;
     background: linear-gradient(0deg, rgba(1,0,17,1) 0%, rgba(1,31,78,1) 50%, rgba(2,69,154,1) 100%) center top fixed;
@@ -54,6 +56,8 @@ p {
     color:rgb(255, 254, 219);
     text-shadow: 2px 2px 3px rgb(0, 0, 0);
 }
+
+/* Main solar-system UI CSS */
 
 .title {
     position: absolute;
@@ -462,7 +466,9 @@ input:focus ~ .search-results{
     display: none;
   }
 
-  .modal-window {
+/* Modal Window UI */
+
+.modal-window {
     z-index: 9;
     width: 100%;
     height: 100%;
@@ -565,10 +571,6 @@ input:focus ~ .search-results{
 
 .fact--container {
     width: 400px;
-    grid-template-areas:
-    "latin rotation"
-    "moons moons"
-    "orbit circumference";
 }
 
 .latin {

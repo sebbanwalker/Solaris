@@ -10,6 +10,7 @@
 </head>
 <body>
     <div class="solar-system">
+        <!-- Search input HTML -->
         <input type="search" id="search-input" class="search-input" autocomplete="off" placeholder="Sök...">
         <ul id="search-results" class="search-results">
                 <li id="solen" class="search-item">Solen</li>
@@ -22,6 +23,8 @@
                 <li id="uranus" class="search-item">Uranus</li>
                 <li id="neptunus" class="search-item">Neptunus</li>
         </ul>
+
+        <!-- Solar system UI HTML -->
         <h1 class="title">Solaris</h1>
         <div class="solen" id="solen--planet">
             <div class="hide" id="solen--title">Solen</div>
@@ -51,6 +54,9 @@
             <div class="hide" id="uranus--title">Neptunus</div>
         </div>
     </div>
+
+    <!-- Modal Window HTML -->
+
     <div class="modal-window" id="modal-window">
         <div class="left-button" id="left-button">
             <img src="assets/arrow.png" class="left-arrow">
@@ -65,9 +71,28 @@
             </div>
             <div class="specs">
                 <h2 class="specs--title" id="specs--title">Fakta</h2>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Expedita, ut. Numquam odit voluptates modi dolor quibusdam, doloribus fuga obcaecati tempore nobis nemo dignissimos placeat magni dolorum eos. Id, accusantium laboriosam.</p>
+                <div class="fact--container">
+                    <div class="specs--card latin">
+                        <h3 class="fact-name">Latin</h3>
+                        <p class="fact-description"  id="latin-name">
+                            Lorem ipsum dolor
+                        </p>
+                    </div>
+                    <div class="specs--card moons">
+                        <h3 class="fact-name">Månar</h3>
+                        <p class="fact-description"  id="moons">
+                            Lorem ipsum dolor
+                        </p>
+                    </div>
+                    <div class="specs--card orbit">
+                        <h3 class="fact-name">Orbit</h3>
+                        <p class="fact-description"  id="orbit">
+                            Lorem ipsum dolor
+                        </p>
+                    </div>
+                </div>
             </div>
-            <div class="image">
+            <div class="image" id="image">
                 <div class="planet-image"></div>
             </div>
             <div class="back-button" id="back-button">X</div>
